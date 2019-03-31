@@ -1,3 +1,0 @@
-Mover cubo - WASD
-Mover camara - Teclas movimiento
-Cambiar color - espacio
