@@ -28,7 +28,6 @@ private:
 	GLfloat lastX;
 	GLfloat lastY;
 	GLfloat xChange;
-	
 	GLfloat yChange;
 	bool mouseFirstMoved;
 	static void ManejaTeclado(GLFWwindow* window, int key, int code, int action, int mode);

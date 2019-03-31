@@ -110,21 +110,21 @@ void Window::ManejaTeclado(GLFWwindow* window, int key, int code, int action, in
 	{
 		const char* key_name = glfwGetKeyName(GLFW_KEY_D, 0);
 		printf("se presiono la tecla: %s\n", key_name);
-		x += 1;
+		x += 1.0f;
 	}
 
 	if (key == GLFW_KEY_Y && action == GLFW_PRESS)
 	{
 		const char* key_name = glfwGetKeyName(GLFW_KEY_D, 0);
 		printf("se presiono la tecla: %s\n", key_name);
-		y += 1;
+		y += 1.0f;
 	}
 
 	if (key == GLFW_KEY_Z && action == GLFW_PRESS)
 	{
 		const char* key_name = glfwGetKeyName(GLFW_KEY_D, 0);
 		printf("se presiono la tecla: %s\n", key_name);
-		z += 1;
+		z += 1.0f;
 	}
 
 	if (key >= 0 && key < 1024)

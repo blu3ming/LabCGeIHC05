@@ -2,5 +2,5 @@
   practica8_alumno.cpp
 c:\users\l.j.mier\documents\visual studio 2017\projects\practica 8 point light\p8\window.h(12): warning C4244: 'return': conversión de 'GLint' a 'GLfloat'; posible pérdida de datos
 c:\users\l.j.mier\documents\visual studio 2017\projects\practica 8 point light\p8\window.h(13): warning C4244: 'return': conversión de 'GLint' a 'GLfloat'; posible pérdida de datos
-c:\users\l.j.mier\documents\visual studio 2017\projects\practica 8 point light\p8\practica8_alumno.cpp(262): warning C4244: 'inicializando': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+c:\users\l.j.mier\documents\visual studio 2017\projects\practica 8 point light\p8\practica8_alumno.cpp(261): warning C4244: 'inicializando': conversión de 'double' a 'GLfloat'; posible pérdida de datos
   p8.vcxproj -> C:\Users\L.J.Mier\Documents\Visual Studio 2017\Projects\Practica 8 Point Light\Debug\p8.exe

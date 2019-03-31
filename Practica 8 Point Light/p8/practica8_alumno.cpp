@@ -29,12 +29,11 @@ Práctica 8 Iluminación 1
 #include "Material.h"
 
 const float toRadians = 3.14159265f / 180.0f;
-
+float x = 0.0f, y = 0.0f, z = 0.0f;
 Window mainWindow;
 std::vector<Mesh*> meshList;
 std::vector<Shader> shaderList;
 Camera camera;
-float x=3.0f, y=0.0f, z=0.0f;
 
 Texture dadoTexture;
 Texture brickTexture;
@@ -156,45 +155,45 @@ void CrearCubo()
 	GLfloat cubo_vertices[] = {
 		// front 1
 		//x		y		z		S		T			NX		NY		NZ
-		-0.5f, -0.5f,  0.5f,	0.25f,  0.0f,		0.0f,	0.0f,	1.0f,
-		0.5f, -0.5f,  0.5f,		0.5f,	0.0f,		0.0f,	0.0f,	1.0f,
-		0.5f,  0.5f,  0.5f,		0.5f,	0.33f,		0.0f,	0.0f,	1.0f,
-		-0.5f,  0.5f,  0.5f,	0.25f,	0.33f,		0.0f,	0.0f,	1.0f,
+		-0.5f, -0.5f,  0.5f,	0.25f,  0.0f,		0.0f,	0.0f,	-1.0f,
+		0.5f, -0.5f,  0.5f,		0.5f,	0.0f,		0.0f,	0.0f,	-1.0f,
+		0.5f,  0.5f,  0.5f,		0.5f,	0.33f,		0.0f,	0.0f,	-1.0f,
+		-0.5f,  0.5f,  0.5f,	0.25f,	0.33f,		0.0f,	0.0f,	-1.0f,
 		// right 5
 		//x		y		z		S		T
-		0.5f, -0.5f,  0.5f,	    0.5f,  0.33f,		1.0f,	0.0f,	0.0f,
-		0.5f, -0.5f,  -0.5f,	0.75f,	0.33f,		1.0f,	0.0f,	0.0f,
-		0.5f,  0.5f,  -0.5f,	0.75f,	0.66f,		1.0f,	0.0f,	0.0f,
-		0.5f,  0.5f,  0.5f,	    0.5f,	0.66f,		1.0f,	0.0f,	0.0f,
+		0.5f, -0.5f,  0.5f,	    0.5f,  0.33f,		-1.0f,	0.0f,	0.0f,
+		0.5f, -0.5f,  -0.5f,	0.75f,	0.33f,		-1.0f,	0.0f,	0.0f,
+		0.5f,  0.5f,  -0.5f,	0.75f,	0.66f,		-1.0f,	0.0f,	0.0f,
+		0.5f,  0.5f,  0.5f,	    0.5f,	0.66f,		-1.0f,	0.0f,	0.0f,
 		// back 6
-		-0.5f, -0.5f, -0.5f,	0.25f,	0.66f,		0.0f,	0.0f,	-1.0f,
-		0.5f, -0.5f, -0.5f,		0.5f,	0.66f,		0.0f,	0.0f,	-1.0f,
-		0.5f,  0.5f, -0.5f,		0.5f,	1.0f,		0.0f,	0.0f,	-1.0f,
-		-0.5f,  0.5f, -0.5f,	0.25f,	1.0f,		0.0f,	0.0f,	-1.0f,
+		-0.5f, -0.5f, -0.5f,	0.25f,	0.66f,		0.0f,	0.0f,	1.0f,
+		0.5f, -0.5f, -0.5f,		0.5f,	0.66f,		0.0f,	0.0f,	1.0f,
+		0.5f,  0.5f, -0.5f,		0.5f,	1.0f,		0.0f,	0.0f,	1.0f,
+		-0.5f,  0.5f, -0.5f,	0.25f,	1.0f,		0.0f,	0.0f,	1.0f,
 
 		// left 2
 		//x		y		z		S		T
-		-0.5f, -0.5f,  -0.5f,	0.0f,	0.33f,		-1.0f,	0.0f,	0.0f,
-		-0.5f, -0.5f,  0.5f,	0.25f,  0.33f,		-1.0f,	0.0f,	0.0f,
-		-0.5f,  0.5f,  0.5f,	0.25f,	0.66f,		-1.0f,	0.0f,	0.0f,
-		-0.5f,  0.5f,  -0.5f,	0.0f,	0.66f,		-1.0f,	0.0f,	0.0f,
+		-0.5f, -0.5f,  -0.5f,	0.0f,	0.33f,		1.0f,	0.0f,	0.0f,
+		-0.5f, -0.5f,  0.5f,	0.25f,  0.33f,		1.0f,	0.0f,	0.0f,
+		-0.5f,  0.5f,  0.5f,	0.25f,	0.66f,		1.0f,	0.0f,	0.0f,
+		-0.5f,  0.5f,  -0.5f,	0.0f,	0.66f,		1.0f,	0.0f,	0.0f,
 
 		// bottom
 		//x		y		z		S		T
-		-0.5f, -0.5f,  0.5f,	0.75f,	0.33f,		0.0f,	-1.0f,	0.0f,
-		0.5f,  -0.5f,  0.5f,	1.0f,  0.33f,		0.0f,	-1.0f,	0.0f,
-		 0.5f,  -0.5f,  -0.5f,	1.0f,	0.66f,		0.0f,	-1.0f,	0.0f,
-		-0.5f, -0.5f,  -0.5f,	0.75f,	0.66f,		0.0f,	-1.0f,	0.0f,
+		-0.5f, -0.5f,  0.5f,	0.75f,	0.33f,		0.0f,	1.0f,	0.0f,
+		0.5f,  -0.5f,  0.5f,	1.0f,  0.33f,		0.0f,	1.0f,	0.0f,
+		 0.5f,  -0.5f,  -0.5f,	1.0f,	0.66f,		0.0f,	1.0f,	0.0f,
+		-0.5f, -0.5f,  -0.5f,	0.75f,	0.66f,		0.0f,	1.0f,	0.0f,
 
 		//UP
 		 //x		y		z		S		T
-		 -0.5f, 0.5f,  0.5f,	0.25f,	0.33f,		0.0f,	1.0f,	0.0f,
-		 0.5f,  0.5f,  0.5f,	0.5f,  0.33f,		0.0f,	1.0f,	0.0f,
-		  0.5f, 0.5f,  -0.5f,	0.5f,	0.66f,		0.0f,	1.0f,	0.0f,
-		 -0.5f, 0.5f,  -0.5f,	0.25f,	0.66f,		0.0f,	1.0f,	0.0f,
+		 -0.5f, 0.5f,  0.5f,	0.25f,	0.33f,		0.0f,	-1.0f,	0.0f,
+		 0.5f,  0.5f,  0.5f,	0.5f,  0.33f,		0.0f,	-1.0f,	0.0f,
+		  0.5f, 0.5f,  -0.5f,	0.5f,	0.66f,		0.0f,	-1.0f,	0.0f,
+		 -0.5f, 0.5f,  -0.5f,	0.25f,	0.66f,		0.0f,	-1.0f,	0.0f,
 
 	};
-	calcAverageNormals(cubo_indices, 36, cubo_vertices, 192, 8, 5);
+	//calcAverageNormals(cubo_indices, 36, cubo_vertices, 192, 8, 5);
 	Mesh *cubo = new Mesh();
 	cubo->CreateMesh(cubo_vertices, cubo_indices, 192, 36);
 	meshList.push_back(cubo);
@@ -230,21 +229,21 @@ int main()
 	Material_opaco = Material(0.3f, 4);
 	//luz direccional, sólo 1 y siempre debe de existir
 	mainLight = DirectionalLight(1.0f, 1.0f, 1.0f, 
-								0.3f, 0.3f,
+								0.1f, 0.1f,
 								0.0f, 0.0f, -1.0f);
-//contador de luces puntuales
+	//contador de luces puntuales
 	unsigned int pointLightCount = 0;
 	//Declaración de primer luz puntual
 	pointLights[0] = PointLight(0.0f, 0.0f, 1.0f,
 								0.0f, 1.0f,
-								3.0f, 0.0f, 0.0f,
+								4.0f, 2.0f, 2.0f,
 								0.3f, 0.2f, 0.1f);
 	pointLightCount++;
 	//Ejercicio 2: agregar otra luz puntual
-	pointLights[1] = PointLight(1.0f, 0.0f, 0.0f,
+	pointLights[1] = PointLight(0.0f, 1.0f, 0.0f,
 								0.0f, 1.0f,
-								x, y, z,
-								0.3f, 0.2f, 0.1f);
+								0.0f, 2.0f, 2.0f,
+								0.3f, 0.1f, 0.1f);
 	pointLightCount++;
 	/*Ejercicio 3: mover las dos luces de forma independiente con teclado y tomar 3 capturas de pantalla:
 	1.- Dado iluminado con luz 1
@@ -289,14 +288,14 @@ int main()
 		glUniform3f(uniformEyePosition, camera.getCameraPosition().x, camera.getCameraPosition().y, camera.getCameraPosition().z);
 
 		glm::mat4 model(1.0);
-		/*
+		
 		model = glm::translate(model, glm::vec3(0.0f, 0.0f, -2.5f));
 		//model = glm::scale(model, glm::vec3(0.4f, 0.4f, 1.0f));
 		glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
 		brickTexture.UseTexture();
 		Material_brillante.UseMaterial(uniformSpecularIntensity, uniformShininess);
 		meshList[0]->RenderMesh();
-
+		
 		model = glm::mat4(1.0);
 		model = glm::translate(model, glm::vec3(0.0f, 4.0f, -2.5f));
 		//model = glm::scale(model, glm::vec3(0.4f, 0.4f, 1.0f));
@@ -304,24 +303,23 @@ int main()
 		dirtTexture.UseTexture();
 		Material_opaco.UseMaterial(uniformSpecularIntensity, uniformShininess);
 		meshList[1]->RenderMesh();
-		*/
-		//model = glm::mat4(1.0);
+		
+		model = glm::mat4(1.0);
 		model = glm::translate(model, glm::vec3(0.0f, -2.0f, 0.0f));
 		//model = glm::scale(model, glm::vec3(0.4f, 0.4f, 1.0f));
 		glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
 		plainTexture.UseTexture();
 		Material_brillante.UseMaterial(uniformSpecularIntensity, uniformShininess);
 		meshList[2]->RenderMesh();
-		
+
+		//instanciar su dado
 		model = glm::mat4(1.0);
-		model = glm::translate(model, glm::vec3(0.0f, 2.5f, 0.0f));
+		model = glm::translate(model, glm::vec3(0.0f, 0.0f, 0.0f));
 		//model = glm::scale(model, glm::vec3(0.4f, 0.4f, 1.0f));
 		glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
 		dadoTexture.UseTexture();
 		Material_brillante.UseMaterial(uniformSpecularIntensity, uniformShininess);
 		meshList[3]->RenderMesh();
-		
-		//instanciar su dado
 
 		glUseProgram(0);
 
