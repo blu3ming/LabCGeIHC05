@@ -240,7 +240,7 @@ int main()
 								0.3f, 0.2f, 0.1f);
 	pointLightCount++;
 	//Ejercicio 2: agregar otra luz puntual
-	pointLights[1] = PointLight(0.0f, 1.0f, 0.0f,
+	pointLights[1] = PointLight(1.0f, 1.0f, 0.0f,
 								0.0f, 1.0f,
 								0.0f, 2.0f, 2.0f,
 								0.3f, 0.1f, 0.1f);
@@ -288,7 +288,7 @@ int main()
 		glUniform3f(uniformEyePosition, camera.getCameraPosition().x, camera.getCameraPosition().y, camera.getCameraPosition().z);
 
 		glm::mat4 model(1.0);
-		
+		/*
 		model = glm::translate(model, glm::vec3(0.0f, 0.0f, -2.5f));
 		//model = glm::scale(model, glm::vec3(0.4f, 0.4f, 1.0f));
 		glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
@@ -303,8 +303,9 @@ int main()
 		dirtTexture.UseTexture();
 		Material_opaco.UseMaterial(uniformSpecularIntensity, uniformShininess);
 		meshList[1]->RenderMesh();
-		
-		model = glm::mat4(1.0);
+		*/
+		//floor
+		//model = glm::mat4(1.0);
 		model = glm::translate(model, glm::vec3(0.0f, -2.0f, 0.0f));
 		//model = glm::scale(model, glm::vec3(0.4f, 0.4f, 1.0f));
 		glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
