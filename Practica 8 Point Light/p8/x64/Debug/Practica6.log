@@ -1,0 +1,21 @@
+﻿  Camera.cpp
+c:\users\l.j.mier\downloads\practica 8\practica6\practica6\camera.h(3): fatal error C1083: No se puede abrir el archivo incluir: 'glew.h': No such file or directory
+  DirectionalLight.cpp
+c:\users\l.j.mier\downloads\practica 8\practica6\practica6\light.h(3): fatal error C1083: No se puede abrir el archivo incluir: 'glew.h': No such file or directory
+  Light.cpp
+c:\users\l.j.mier\downloads\practica 8\practica6\practica6\light.h(3): fatal error C1083: No se puede abrir el archivo incluir: 'glew.h': No such file or directory
+  Material.cpp
+c:\users\l.j.mier\downloads\practica 8\practica6\practica6\material.h(3): fatal error C1083: No se puede abrir el archivo incluir: 'glew.h': No such file or directory
+  Mesh_tn.cpp
+c:\users\l.j.mier\downloads\practica 8\practica6\practica6\mesh_texturizado.h(2): fatal error C1083: No se puede abrir el archivo incluir: 'glew.h': No such file or directory
+  PointLight.cpp
+c:\users\l.j.mier\downloads\practica 8\practica6\practica6\light.h(3): fatal error C1083: No se puede abrir el archivo incluir: 'glew.h': No such file or directory
+  practica8_alumno.cpp
+c:\users\l.j.mier\downloads\practica 8\practica6\practica6\practica8_alumno.cpp(13): fatal error C1083: No se puede abrir el archivo incluir: 'glew.h': No such file or directory
+  Shader_light.cpp
+c:\users\l.j.mier\downloads\practica 8\practica6\practica6\shader_light.h(8): fatal error C1083: No se puede abrir el archivo incluir: 'glew.h': No such file or directory
+  Texture.cpp
+c:\users\l.j.mier\downloads\practica 8\practica6\practica6\texture.h(2): fatal error C1083: No se puede abrir el archivo incluir: 'glew.h': No such file or directory
+  Window.cpp
+c:\users\l.j.mier\downloads\practica 8\practica6\practica6\window.h(3): fatal error C1083: No se puede abrir el archivo incluir: 'glew.h': No such file or directory
+  Generando código...

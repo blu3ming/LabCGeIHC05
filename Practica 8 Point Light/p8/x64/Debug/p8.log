@@ -1,0 +1,22 @@
+﻿C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets(391,5): warning MSB8028: El directorio intermedio (x64\Debug\) contiene archivos compartidos de otro proyecto (Practica7.vcxproj). Esto puede dar lugar a un comportamiento incorrecto de limpieza y recompilación.
+  Camera.cpp
+c:\users\l.j.mier\desktop\p8\p8\p8\camera.h(3): fatal error C1083: No se puede abrir el archivo incluir: 'glew.h': No such file or directory
+  DirectionalLight.cpp
+c:\users\l.j.mier\desktop\p8\p8\p8\light.h(3): fatal error C1083: No se puede abrir el archivo incluir: 'glew.h': No such file or directory
+  Light.cpp
+c:\users\l.j.mier\desktop\p8\p8\p8\light.h(3): fatal error C1083: No se puede abrir el archivo incluir: 'glew.h': No such file or directory
+  Material.cpp
+c:\users\l.j.mier\desktop\p8\p8\p8\material.h(3): fatal error C1083: No se puede abrir el archivo incluir: 'glew.h': No such file or directory
+  Mesh_tn.cpp
+c:\users\l.j.mier\desktop\p8\p8\p8\mesh_texturizado.h(2): fatal error C1083: No se puede abrir el archivo incluir: 'glew.h': No such file or directory
+  PointLight.cpp
+c:\users\l.j.mier\desktop\p8\p8\p8\light.h(3): fatal error C1083: No se puede abrir el archivo incluir: 'glew.h': No such file or directory
+  practica8_alumno.cpp
+c:\users\l.j.mier\desktop\p8\p8\p8\practica8_alumno.cpp(13): fatal error C1083: No se puede abrir el archivo incluir: 'glew.h': No such file or directory
+  Shader_light.cpp
+c:\users\l.j.mier\desktop\p8\p8\p8\shader_light.h(8): fatal error C1083: No se puede abrir el archivo incluir: 'glew.h': No such file or directory
+  Texture.cpp
+c:\users\l.j.mier\desktop\p8\p8\p8\texture.h(2): fatal error C1083: No se puede abrir el archivo incluir: 'glew.h': No such file or directory
+  Window.cpp
+c:\users\l.j.mier\desktop\p8\p8\p8\window.h(3): fatal error C1083: No se puede abrir el archivo incluir: 'glew.h': No such file or directory
+  Generando código...

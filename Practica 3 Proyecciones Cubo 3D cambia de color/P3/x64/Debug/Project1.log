@@ -1,0 +1,9 @@
+﻿  Mesh.cpp
+c:\users\l.j.mier\desktop\cgihc-2019-2\project1\project1\mesh.h(2): fatal error C1083: No se puede abrir el archivo incluir: 'glew.h': No such file or directory
+  practica3.cpp
+c:\users\l.j.mier\desktop\cgihc-2019-2\project1\project1\practica3.cpp(5): fatal error C1083: No se puede abrir el archivo incluir: 'glew.h': No such file or directory
+  Shader.cpp
+c:\users\l.j.mier\desktop\cgihc-2019-2\project1\project1\shader.h(7): fatal error C1083: No se puede abrir el archivo incluir: 'glew.h': No such file or directory
+  Window.cpp
+c:\users\l.j.mier\desktop\cgihc-2019-2\project1\project1\window.h(3): fatal error C1083: No se puede abrir el archivo incluir: 'glew.h': No such file or directory
+  Generando código...

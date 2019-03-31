@@ -1,0 +1,6 @@
+﻿C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets(391,5): warning MSB8028: El directorio intermedio (Debug\) contiene archivos compartidos de otro proyecto (Practica6.vcxproj). Esto puede dar lugar a un comportamiento incorrecto de limpieza y recompilación.
+  practica8_alumno.cpp
+c:\users\cgi05\desktop\practica6\practica6\window.h(12): warning C4244: 'return': conversión de 'GLint' a 'GLfloat'; posible pérdida de datos
+c:\users\cgi05\desktop\practica6\practica6\window.h(13): warning C4244: 'return': conversión de 'GLint' a 'GLfloat'; posible pérdida de datos
+c:\users\cgi05\desktop\practica6\practica6\practica8_alumno.cpp(262): warning C4244: 'inicializando': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+  Practica6.vcxproj -> C:\Users\CGI05\Desktop\Practica6\Debug\Practica7.exe
