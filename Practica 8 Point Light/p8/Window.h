@@ -2,7 +2,7 @@
 #include<stdio.h>
 #include<glew.h>
 #include<glfw3.h>
-extern float x, y, z;
+extern float x, y, z, x_1, y_1, z_1;
 class Window
 {
 public:

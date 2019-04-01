@@ -29,7 +29,7 @@ Práctica 8 Iluminación 1
 #include "Material.h"
 
 const float toRadians = 3.14159265f / 180.0f;
-float x = 0.0f, y = 0.0f, z = 0.0f;
+float x = 0.0f, y = 0.0f, z = 0.0f, x_1 = 0.0f, y_1 = 0.0f, z_1 = 0.0f;
 Window mainWindow;
 std::vector<Mesh*> meshList;
 std::vector<Shader> shaderList;
@@ -180,17 +180,17 @@ void CrearCubo()
 
 		// bottom
 		//x		y		z		S		T
-		-0.5f, -0.5f,  0.5f,	0.75f,	0.33f,		0.0f,	1.0f,	0.0f,
-		0.5f,  -0.5f,  0.5f,	1.0f,  0.33f,		0.0f,	1.0f,	0.0f,
-		 0.5f,  -0.5f,  -0.5f,	1.0f,	0.66f,		0.0f,	1.0f,	0.0f,
-		-0.5f, -0.5f,  -0.5f,	0.75f,	0.66f,		0.0f,	1.0f,	0.0f,
+		-0.5f, -0.5f,  0.5f,	0.75f,	0.33f,		0.0f,	-1.0f,	0.0f,
+		0.5f,  -0.5f,  0.5f,	1.0f,  0.33f,		0.0f,	-1.0f,	0.0f,
+		 0.5f,  -0.5f,  -0.5f,	1.0f,	0.66f,		0.0f,	-1.0f,	0.0f,
+		-0.5f, -0.5f,  -0.5f,	0.75f,	0.66f,		0.0f,	-1.0f,	0.0f,
 
 		//UP
 		 //x		y		z		S		T
-		 -0.5f, 0.5f,  0.5f,	0.25f,	0.33f,		0.0f,	-1.0f,	0.0f,
-		 0.5f,  0.5f,  0.5f,	0.5f,  0.33f,		0.0f,	-1.0f,	0.0f,
-		  0.5f, 0.5f,  -0.5f,	0.5f,	0.66f,		0.0f,	-1.0f,	0.0f,
-		 -0.5f, 0.5f,  -0.5f,	0.25f,	0.66f,		0.0f,	-1.0f,	0.0f,
+		 -0.5f, 0.5f,  0.5f,	0.25f,	0.33f,		0.0f,	1.0f,	0.0f,
+		 0.5f,  0.5f,  0.5f,	0.5f,  0.33f,		0.0f,	1.0f,	0.0f,
+		  0.5f, 0.5f,  -0.5f,	0.5f,	0.66f,		0.0f,	1.0f,	0.0f,
+		 -0.5f, 0.5f,  -0.5f,	0.25f,	0.66f,		0.0f,	1.0f,	0.0f,
 
 	};
 	//calcAverageNormals(cubo_indices, 36, cubo_vertices, 192, 8, 5);
@@ -236,13 +236,13 @@ int main()
 	//Declaración de primer luz puntual
 	pointLights[0] = PointLight(0.0f, 0.0f, 1.0f,
 								0.0f, 1.0f,
-								4.0f, 2.0f, 2.0f,
+								x, y, z,
 								0.3f, 0.2f, 0.1f);
 	pointLightCount++;
 	//Ejercicio 2: agregar otra luz puntual
 	pointLights[1] = PointLight(1.0f, 1.0f, 0.0f,
 								0.0f, 1.0f,
-								0.0f, 2.0f, 2.0f,
+								x_1, y_1, z_1,
 								0.3f, 0.1f, 0.1f);
 	pointLightCount++;
 	/*Ejercicio 3: mover las dos luces de forma independiente con teclado y tomar 3 capturas de pantalla:
@@ -258,6 +258,17 @@ int main()
 	//Loop mientras no se cierra la ventana
 	while (!mainWindow.getShouldClose())
 	{
+		pointLights[0] = PointLight(0.0f, 0.0f, 1.0f,
+									0.0f, 1.0f,
+									x, y, z,
+									0.3f, 0.2f, 0.1f);
+		
+		//Ejercicio 2: agregar otra luz puntual
+		pointLights[1] = PointLight(1.0f, 1.0f, 0.0f,
+									0.0f, 1.0f,
+									x_1, y_1, z_1,
+									0.3f, 0.1f, 0.1f);
+		
 		GLfloat now = glfwGetTime();
 		deltaTime = now - lastTime; 
 		lastTime = now;

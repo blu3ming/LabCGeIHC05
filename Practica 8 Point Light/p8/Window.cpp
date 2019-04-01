@@ -105,26 +105,90 @@ void Window::ManejaTeclado(GLFWwindow* window, int key, int code, int action, in
 		const char* key_name = glfwGetKeyName(GLFW_KEY_D, 0);
 		printf("se presiono la tecla: %s\n",key_name);
 	}
-
-	if (key == GLFW_KEY_X && action == GLFW_PRESS)
+	//x
+	if (key == GLFW_KEY_RIGHT && action == GLFW_PRESS)
 	{
 		const char* key_name = glfwGetKeyName(GLFW_KEY_D, 0);
 		printf("se presiono la tecla: %s\n", key_name);
 		x += 1.0f;
 	}
-
-	if (key == GLFW_KEY_Y && action == GLFW_PRESS)
+	//x
+	if (key == GLFW_KEY_LEFT && action == GLFW_PRESS)
+	{
+		const char* key_name = glfwGetKeyName(GLFW_KEY_D, 0);
+		printf("se presiono la tecla: %s\n", key_name);
+		x -= 1.0f;
+	}
+	//y
+	if (key == GLFW_KEY_1 && action == GLFW_PRESS)
+	{
+		const char* key_name = glfwGetKeyName(GLFW_KEY_D, 0);
+		printf("se presiono la tecla: %s\n", key_name);
+		y -= 1.0f;
+	}
+	//y
+	if (key == GLFW_KEY_2 && action == GLFW_PRESS)
 	{
 		const char* key_name = glfwGetKeyName(GLFW_KEY_D, 0);
 		printf("se presiono la tecla: %s\n", key_name);
 		y += 1.0f;
 	}
-
-	if (key == GLFW_KEY_Z && action == GLFW_PRESS)
+	//z
+	if (key == GLFW_KEY_UP && action == GLFW_PRESS)
+	{
+		const char* key_name = glfwGetKeyName(GLFW_KEY_D, 0);
+		printf("se presiono la tecla: %s\n", key_name);
+		z -= 1.0f;
+	}
+	//z
+	if (key == GLFW_KEY_DOWN && action == GLFW_PRESS)
 	{
 		const char* key_name = glfwGetKeyName(GLFW_KEY_D, 0);
 		printf("se presiono la tecla: %s\n", key_name);
 		z += 1.0f;
+	}
+
+	//x1
+	if (key == GLFW_KEY_L && action == GLFW_PRESS)
+	{
+		const char* key_name = glfwGetKeyName(GLFW_KEY_D, 0);
+		printf("se presiono la tecla: %s\n", key_name);
+		x_1 += 1.0f;
+	}
+	//x1
+	if (key == GLFW_KEY_J && action == GLFW_PRESS)
+	{
+		const char* key_name = glfwGetKeyName(GLFW_KEY_D, 0);
+		printf("se presiono la tecla: %s\n", key_name);
+		x_1 -= 1.0f;
+	}
+	//y1
+	if (key == GLFW_KEY_3 && action == GLFW_PRESS)
+	{
+		const char* key_name = glfwGetKeyName(GLFW_KEY_D, 0);
+		printf("se presiono la tecla: %s\n", key_name);
+		y_1 -= 1.0f;
+	}
+	//y1
+	if (key == GLFW_KEY_4 && action == GLFW_PRESS)
+	{
+		const char* key_name = glfwGetKeyName(GLFW_KEY_D, 0);
+		printf("se presiono la tecla: %s\n", key_name);
+		y_1 += 1.0f;
+	}
+	//z1
+	if (key == GLFW_KEY_I && action == GLFW_PRESS)
+	{
+		const char* key_name = glfwGetKeyName(GLFW_KEY_D, 0);
+		printf("se presiono la tecla: %s\n", key_name);
+		z_1 -= 1.0f;
+	}
+	//z1
+	if (key == GLFW_KEY_K && action == GLFW_PRESS)
+	{
+		const char* key_name = glfwGetKeyName(GLFW_KEY_D, 0);
+		printf("se presiono la tecla: %s\n", key_name);
+		z_1 += 1.0f;
 	}
 
 	if (key >= 0 && key < 1024)
