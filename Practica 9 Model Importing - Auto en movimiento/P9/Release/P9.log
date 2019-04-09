@@ -1,1 +1,36 @@
-﻿  P9.vcxproj -> C:\Users\L.J.Mier\Documents\Visual Studio 2017\Projects\Practica 9 Model Importing\Release\P9.exe
+﻿  practica9_alumno.cpp
+c:\users\l.j.mier\documents\visual studio 2017\projects\practica 9 model importing - auto en movimiento\p9\window.h(11): warning C4244: 'return': conversión de 'GLint' a 'GLfloat'; posible pérdida de datos
+c:\users\l.j.mier\documents\visual studio 2017\projects\practica 9 model importing - auto en movimiento\p9\window.h(12): warning C4244: 'return': conversión de 'GLint' a 'GLfloat'; posible pérdida de datos
+c:\users\l.j.mier\documents\visual studio 2017\projects\practica 9 model importing - auto en movimiento\p9\practica9_alumno.cpp(307): warning C4244: 'inicializando': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+c:\users\l.j.mier\documents\visual studio 2017\projects\practica 9 model importing - auto en movimiento\p9\practica9_alumno.cpp(461): warning C4305: '+=': truncamiento de 'double' a 'float'
+c:\users\l.j.mier\documents\visual studio 2017\projects\practica 9 model importing - auto en movimiento\p9\practica9_alumno.cpp(465): warning C4553: "==": el resultado de la expresión no se usa. ¿Quiso decir "="?
+c:\users\l.j.mier\documents\visual studio 2017\projects\practica 9 model importing - auto en movimiento\p9\practica9_alumno.cpp(474): warning C4305: '+=': truncamiento de 'double' a 'float'
+c:\users\l.j.mier\documents\visual studio 2017\projects\practica 9 model importing - auto en movimiento\p9\practica9_alumno.cpp(475): warning C4305: '+=': truncamiento de 'double' a 'float'
+c:\users\l.j.mier\documents\visual studio 2017\projects\practica 9 model importing - auto en movimiento\p9\practica9_alumno.cpp(486): warning C4305: '+=': truncamiento de 'double' a 'float'
+c:\users\l.j.mier\documents\visual studio 2017\projects\practica 9 model importing - auto en movimiento\p9\practica9_alumno.cpp(498): warning C4305: '-=': truncamiento de 'double' a 'float'
+c:\users\l.j.mier\documents\visual studio 2017\projects\practica 9 model importing - auto en movimiento\p9\practica9_alumno.cpp(499): warning C4305: '+=': truncamiento de 'double' a 'float'
+c:\users\l.j.mier\documents\visual studio 2017\projects\practica 9 model importing - auto en movimiento\p9\practica9_alumno.cpp(510): warning C4305: '-=': truncamiento de 'double' a 'float'
+c:\users\l.j.mier\documents\visual studio 2017\projects\practica 9 model importing - auto en movimiento\p9\practica9_alumno.cpp(521): warning C4305: '+=': truncamiento de 'double' a 'float'
+c:\users\l.j.mier\documents\visual studio 2017\projects\practica 9 model importing - auto en movimiento\p9\practica9_alumno.cpp(522): warning C4305: '-=': truncamiento de 'double' a 'float'
+c:\users\l.j.mier\documents\visual studio 2017\projects\practica 9 model importing - auto en movimiento\p9\practica9_alumno.cpp(523): warning C4305: '+=': truncamiento de 'double' a 'float'
+c:\users\l.j.mier\documents\visual studio 2017\projects\practica 9 model importing - auto en movimiento\p9\practica9_alumno.cpp(536): warning C4305: '-=': truncamiento de 'double' a 'float'
+c:\users\l.j.mier\documents\visual studio 2017\projects\practica 9 model importing - auto en movimiento\p9\practica9_alumno.cpp(537): warning C4305: '-=': truncamiento de 'double' a 'float'
+c:\users\l.j.mier\documents\visual studio 2017\projects\practica 9 model importing - auto en movimiento\p9\practica9_alumno.cpp(538): warning C4305: '+=': truncamiento de 'double' a 'float'
+c:\users\l.j.mier\documents\visual studio 2017\projects\practica 9 model importing - auto en movimiento\p9\practica9_alumno.cpp(539): warning C4305: '=': truncamiento de 'double' a 'float'
+c:\users\l.j.mier\documents\visual studio 2017\projects\practica 9 model importing - auto en movimiento\p9\practica9_alumno.cpp(551): warning C4305: '-=': truncamiento de 'double' a 'float'
+c:\users\l.j.mier\documents\visual studio 2017\projects\practica 9 model importing - auto en movimiento\p9\practica9_alumno.cpp(552): warning C4305: '-=': truncamiento de 'double' a 'float'
+c:\users\l.j.mier\documents\visual studio 2017\projects\practica 9 model importing - auto en movimiento\p9\practica9_alumno.cpp(553): warning C4305: '-=': truncamiento de 'double' a 'float'
+c:\users\l.j.mier\documents\visual studio 2017\projects\practica 9 model importing - auto en movimiento\p9\practica9_alumno.cpp(564): warning C4305: '+=': truncamiento de 'double' a 'float'
+c:\users\l.j.mier\documents\visual studio 2017\projects\practica 9 model importing - auto en movimiento\p9\practica9_alumno.cpp(565): warning C4305: '-=': truncamiento de 'double' a 'float'
+c:\users\l.j.mier\documents\visual studio 2017\projects\practica 9 model importing - auto en movimiento\p9\practica9_alumno.cpp(566): warning C4305: '-=': truncamiento de 'double' a 'float'
+c:\users\l.j.mier\documents\visual studio 2017\projects\practica 9 model importing - auto en movimiento\p9\practica9_alumno.cpp(578): warning C4305: '-=': truncamiento de 'double' a 'float'
+c:\users\l.j.mier\documents\visual studio 2017\projects\practica 9 model importing - auto en movimiento\p9\practica9_alumno.cpp(579): warning C4305: '-=': truncamiento de 'double' a 'float'
+c:\users\l.j.mier\documents\visual studio 2017\projects\practica 9 model importing - auto en movimiento\p9\practica9_alumno.cpp(590): warning C4305: '-=': truncamiento de 'double' a 'float'
+c:\users\l.j.mier\documents\visual studio 2017\projects\practica 9 model importing - auto en movimiento\p9\practica9_alumno.cpp(604): warning C4305: '+=': truncamiento de 'double' a 'float'
+c:\users\l.j.mier\documents\visual studio 2017\projects\practica 9 model importing - auto en movimiento\p9\practica9_alumno.cpp(605): warning C4305: '-=': truncamiento de 'double' a 'float'
+  Generando código
+  1 of 1007 functions (<0.1%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    0 functions had inline decision re-evaluated but remain unchanged
+  Generación de código finalizada
+  P9.vcxproj -> C:\Users\L.J.Mier\Documents\Visual Studio 2017\Projects\Practica 9 Model Importing - Auto en movimiento\Release\P9.exe

@@ -140,6 +140,7 @@
     <ClCompile Include="PointLight.cpp" />
     <ClCompile Include="practica9_alumno.cpp" />
     <ClCompile Include="Shader_light.cpp" />
+    <ClCompile Include="Skybox.cpp" />
     <ClCompile Include="Texture.cpp" />
     <ClCompile Include="Window.cpp" />
   </ItemGroup>
@@ -153,8 +154,8 @@
     <ClInclude Include="Mesh_texturizado.h" />
     <ClInclude Include="Model.h" />
     <ClInclude Include="PointLight.h" />
-    <ClInclude Include="Shader.h" />
     <ClInclude Include="Shader_light.h" />
+    <ClInclude Include="Skybox.h" />
     <ClInclude Include="stb_image.h" />
     <ClInclude Include="Texture.h" />
     <ClInclude Include="Window.h" />

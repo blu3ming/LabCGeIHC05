@@ -11,6 +11,7 @@
 
 #include "DirectionalLight.h"
 #include "PointLight.h"
+#include "Mesh_texturizado.h"
 
 class Shader
 {
@@ -19,6 +20,8 @@ public:
 
 	void CreateFromString(const char* vertexCode, const char* fragmentCode);
 	void CreateFromFiles(const char* vertexLocation, const char* fragmentLocation);
+
+	void Validate();
 
 	std::string ReadFile(const char* fileLocation);
 
@@ -32,6 +35,7 @@ public:
 	GLuint GetSpecularIntensityLocation();
 	GLuint GetShininessLocation();
 	GLuint GetEyePositionLocation();
+	//GLuint Validate();
 
 	void SetDirectionalLight(DirectionalLight * dLight);
 	void SetPointLights(PointLight * pLight, unsigned int lightCount);

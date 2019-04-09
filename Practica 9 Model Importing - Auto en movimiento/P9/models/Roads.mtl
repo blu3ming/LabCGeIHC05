@@ -1,0 +1,565 @@
+# Blender MTL File: 'Roads.blend'
+# Material Count: 55
+
+newmtl LoD_0SG
+Ns 96.078431
+Ka 0.000000 0.000000 0.000000
+Kd 0.500000 0.500000 0.500000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+
+newmtl LoD_0SG.001
+Ns 96.078431
+Ka 0.000000 0.000000 0.000000
+Kd 0.500000 0.500000 0.500000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+
+newmtl None
+Ns 0
+Ka 0.000000 0.000000 0.000000
+Kd 0.8 0.8 0.8
+Ks 0.8 0.8 0.8
+d 1
+illum 2
+
+newmtl None_CordonMedium.jpg.000
+Ns 0
+Ka 0.000000 0.000000 0.000000
+Kd 0.8 0.8 0.8
+Ks 0.8 0.8 0.8
+d 1
+illum 2
+map_Kd C:\Users\L.J.Mier\Desktop\Downloads\ervm74i2dwcg-StreetSystemV1.0\Roads\CordonMedium.jpg
+
+newmtl None_CordonMedium.jpg.001
+Ns 0
+Ka 0.000000 0.000000 0.000000
+Kd 0.8 0.8 0.8
+Ks 0.8 0.8 0.8
+d 1
+illum 2
+map_Kd C:\Users\L.J.Mier\Desktop\Downloads\ervm74i2dwcg-StreetSystemV1.0\Roads\CordonMedium.jpg
+
+newmtl None_CordonMedium.jpg.003
+Ns 0
+Ka 0.000000 0.000000 0.000000
+Kd 0.8 0.8 0.8
+Ks 0.8 0.8 0.8
+d 1
+illum 2
+map_Kd C:\Users\L.J.Mier\Desktop\Downloads\ervm74i2dwcg-StreetSystemV1.0\Roads\CordonMedium.jpg
+
+newmtl None_CordonMedium.jpg.004
+Ns 0
+Ka 0.000000 0.000000 0.000000
+Kd 0.8 0.8 0.8
+Ks 0.8 0.8 0.8
+d 1
+illum 2
+map_Kd C:\Users\L.J.Mier\Desktop\Downloads\ervm74i2dwcg-StreetSystemV1.0\Roads\CordonMedium.jpg
+
+newmtl None_CordonMedium.jpg.005
+Ns 0
+Ka 0.000000 0.000000 0.000000
+Kd 0.8 0.8 0.8
+Ks 0.8 0.8 0.8
+d 1
+illum 2
+map_Kd C:\Users\L.J.Mier\Desktop\Downloads\ervm74i2dwcg-StreetSystemV1.0\Roads\CordonMedium.jpg
+
+newmtl None_CordonMedium.jpg.006
+Ns 0
+Ka 0.000000 0.000000 0.000000
+Kd 0.8 0.8 0.8
+Ks 0.8 0.8 0.8
+d 1
+illum 2
+map_Kd C:\Users\L.J.Mier\Desktop\Downloads\ervm74i2dwcg-StreetSystemV1.0\Roads\CordonMedium.jpg
+
+newmtl None_CordonMedium.jpg.007
+Ns 0
+Ka 0.000000 0.000000 0.000000
+Kd 0.8 0.8 0.8
+Ks 0.8 0.8 0.8
+d 1
+illum 2
+map_Kd C:\Users\L.J.Mier\Desktop\Downloads\ervm74i2dwcg-StreetSystemV1.0\Roads\CordonMedium.jpg
+
+newmtl None_CordonTop.jpg.000
+Ns 0
+Ka 0.000000 0.000000 0.000000
+Kd 0.8 0.8 0.8
+Ks 0.8 0.8 0.8
+d 1
+illum 2
+map_Kd C:\Users\L.J.Mier\Desktop\Downloads\ervm74i2dwcg-StreetSystemV1.0\Roads\CordonTop.jpg
+
+newmtl None_CordonTop.jpg.001
+Ns 0
+Ka 0.000000 0.000000 0.000000
+Kd 0.8 0.8 0.8
+Ks 0.8 0.8 0.8
+d 1
+illum 2
+map_Kd C:\Users\L.J.Mier\Desktop\Downloads\ervm74i2dwcg-StreetSystemV1.0\Roads\CordonTop.jpg
+
+newmtl None_CordonTop.jpg.002
+Ns 0
+Ka 0.000000 0.000000 0.000000
+Kd 0.8 0.8 0.8
+Ks 0.8 0.8 0.8
+d 1
+illum 2
+map_Kd C:\Users\L.J.Mier\Desktop\Downloads\ervm74i2dwcg-StreetSystemV1.0\Roads\CordonTop.jpg
+
+newmtl None_CordonTop.jpg.003
+Ns 0
+Ka 0.000000 0.000000 0.000000
+Kd 0.8 0.8 0.8
+Ks 0.8 0.8 0.8
+d 1
+illum 2
+map_Kd C:\Users\L.J.Mier\Desktop\Downloads\ervm74i2dwcg-StreetSystemV1.0\Roads\CordonTop.jpg
+
+newmtl None_CordonTop.jpg.004
+Ns 0
+Ka 0.000000 0.000000 0.000000
+Kd 0.8 0.8 0.8
+Ks 0.8 0.8 0.8
+d 1
+illum 2
+map_Kd C:\Users\L.J.Mier\Desktop\Downloads\ervm74i2dwcg-StreetSystemV1.0\Roads\CordonTop.jpg
+
+newmtl None_CordonTop.jpg.005
+Ns 0
+Ka 0.000000 0.000000 0.000000
+Kd 0.8 0.8 0.8
+Ks 0.8 0.8 0.8
+d 1
+illum 2
+map_Kd C:\Users\L.J.Mier\Desktop\Downloads\ervm74i2dwcg-StreetSystemV1.0\Roads\CordonTop.jpg
+
+newmtl None_CordonTop.jpg.006
+Ns 0
+Ka 0.000000 0.000000 0.000000
+Kd 0.8 0.8 0.8
+Ks 0.8 0.8 0.8
+d 1
+illum 2
+map_Kd C:\Users\L.J.Mier\Desktop\Downloads\ervm74i2dwcg-StreetSystemV1.0\Roads\CordonTop.jpg
+
+newmtl None_FloorsRegular0277_1_S.jpg.000
+Ns 0
+Ka 0.000000 0.000000 0.000000
+Kd 0.8 0.8 0.8
+Ks 0.8 0.8 0.8
+d 1
+illum 2
+map_Kd C:\Users\L.J.Mier\Desktop\Downloads\ervm74i2dwcg-StreetSystemV1.0\Roads\Vereda.jpg
+
+newmtl None_FloorsRegular0277_1_S.jpg.001
+Ns 0
+Ka 0.000000 0.000000 0.000000
+Kd 0.8 0.8 0.8
+Ks 0.8 0.8 0.8
+d 1
+illum 2
+map_Kd C:\Users\L.J.Mier\Desktop\Downloads\ervm74i2dwcg-StreetSystemV1.0\Roads\Vereda.jpg
+
+newmtl None_FloorsRegular0277_1_S.jpg.002
+Ns 0
+Ka 0.000000 0.000000 0.000000
+Kd 0.8 0.8 0.8
+Ks 0.8 0.8 0.8
+d 1
+illum 2
+map_Kd C:\Users\L.J.Mier\Desktop\Downloads\ervm74i2dwcg-StreetSystemV1.0\Roads\Vereda.jpg
+
+newmtl None_FloorsRegular0277_1_S.jpg.003
+Ns 0
+Ka 0.000000 0.000000 0.000000
+Kd 0.8 0.8 0.8
+Ks 0.8 0.8 0.8
+d 1
+illum 2
+map_Kd C:\Users\L.J.Mier\Desktop\Downloads\ervm74i2dwcg-StreetSystemV1.0\Roads\Vereda.jpg
+
+newmtl None_FloorsRegular0277_1_S.jpg.004
+Ns 0
+Ka 0.000000 0.000000 0.000000
+Kd 0.8 0.8 0.8
+Ks 0.8 0.8 0.8
+d 1
+illum 2
+map_Kd C:\Users\L.J.Mier\Desktop\Downloads\ervm74i2dwcg-StreetSystemV1.0\Roads\Vereda.jpg
+
+newmtl None_FloorsRegular0277_1_S.jpg.005
+Ns 0
+Ka 0.000000 0.000000 0.000000
+Kd 0.8 0.8 0.8
+Ks 0.8 0.8 0.8
+d 1
+illum 2
+map_Kd C:\Users\L.J.Mier\Desktop\Downloads\ervm74i2dwcg-StreetSystemV1.0\Roads\Vereda.jpg
+
+newmtl None_FloorsRegular0277_1_S.jpg.006
+Ns 0
+Ka 0.000000 0.000000 0.000000
+Kd 0.8 0.8 0.8
+Ks 0.8 0.8 0.8
+d 1
+illum 2
+map_Kd C:\Users\L.J.Mier\Desktop\Downloads\ervm74i2dwcg-StreetSystemV1.0\Roads\Vereda.jpg
+
+newmtl None_Roads0069_9_S.jpg
+Ns 0
+Ka 0.000000 0.000000 0.000000
+Kd 0.8 0.8 0.8
+Ks 0.8 0.8 0.8
+d 1
+illum 2
+map_Kd C:\Users\L.J.Mier\Desktop\Downloads\ervm74i2dwcg-StreetSystemV1.0\Roads\Roadstraight.jpg
+
+newmtl None_Roads0069_9_S.jpg.001
+Ns 0
+Ka 0.000000 0.000000 0.000000
+Kd 0.8 0.8 0.8
+Ks 0.8 0.8 0.8
+d 1
+illum 2
+map_Kd C:\Users\L.J.Mier\Desktop\Downloads\ervm74i2dwcg-StreetSystemV1.0\Roads\Roadstraight.jpg
+
+newmtl None_Roads0069_9_S.jpg.002
+Ns 0
+Ka 0.000000 0.000000 0.000000
+Kd 0.8 0.8 0.8
+Ks 0.8 0.8 0.8
+d 1
+illum 2
+map_Kd C:\Users\L.J.Mier\Desktop\Downloads\ervm74i2dwcg-StreetSystemV1.0\Roads\Roadstraight.jpg
+
+newmtl None_Roads0069_9_S.jpg.003
+Ns 0
+Ka 0.000000 0.000000 0.000000
+Kd 0.8 0.8 0.8
+Ks 0.8 0.8 0.8
+d 1
+illum 2
+map_Kd C:\Users\L.J.Mier\Desktop\Downloads\ervm74i2dwcg-StreetSystemV1.0\Roads\Roadstraight.jpg
+
+newmtl None_Roads0069_9_S.jpg.004
+Ns 0
+Ka 0.000000 0.000000 0.000000
+Kd 0.8 0.8 0.8
+Ks 0.8 0.8 0.8
+d 1
+illum 2
+map_Kd C:\Users\L.J.Mier\Desktop\Downloads\ervm74i2dwcg-StreetSystemV1.0\Roads\Roadstraight.jpg
+
+newmtl None_Roads0069_9_S.jpg.005
+Ns 0
+Ka 0.000000 0.000000 0.000000
+Kd 0.8 0.8 0.8
+Ks 0.8 0.8 0.8
+d 1
+illum 2
+map_Kd C:\Users\L.J.Mier\Desktop\Downloads\ervm74i2dwcg-StreetSystemV1.0\Roads\Roadstraight.jpg
+
+newmtl None_Roads0069_9_S.jpg.006
+Ns 0
+Ka 0.000000 0.000000 0.000000
+Kd 0.8 0.8 0.8
+Ks 0.8 0.8 0.8
+d 1
+illum 2
+map_Kd C:\Users\L.J.Mier\Desktop\Downloads\ervm74i2dwcg-StreetSystemV1.0\Roads\Roadstraight.jpg
+
+newmtl Rinde.013
+Ns 96.078431
+Ka 1.000000 1.000000 1.000000
+Kd 0.197647 0.181961 0.181961
+Ks 0.001961 0.001961 0.001961
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd C:\Users\L.J.Mier\Downloads\tree\tree1_3ds\bark_loo.jpg
+map_Bump C:\\Users\\L.J.Mier\\Downloads\\tree\\tree1_3ds\\bark_loo.jpg
+
+newmtl Rinde.014
+Ns 96.078431
+Ka 1.000000 1.000000 1.000000
+Kd 0.197647 0.181961 0.181961
+Ks 0.001961 0.001961 0.001961
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd C:\Users\L.J.Mier\Desktop\Downloads\tree\tree1_3ds\bark_loo.jpg
+map_Bump C:\\Users\\L.J.Mier\\Desktop\\Downloads\\tree\\tree1_3ds\\bark_loo.jpg
+
+newmtl Rinde.015
+Ns 96.078431
+Ka 1.000000 1.000000 1.000000
+Kd 0.197647 0.181961 0.181961
+Ks 0.001961 0.001961 0.001961
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd C:\Users\L.J.Mier\Desktop\Downloads\tree\tree1_3ds\bark_loo.jpg
+map_Bump C:\\Users\\L.J.Mier\\Desktop\\Downloads\\tree\\tree1_3ds\\bark_loo.jpg
+
+newmtl Rinde.016
+Ns 96.078431
+Ka 1.000000 1.000000 1.000000
+Kd 0.197647 0.181961 0.181961
+Ks 0.001961 0.001961 0.001961
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd C:\Users\L.J.Mier\Desktop\Downloads\tree\tree1_3ds\bark_loo.jpg
+map_Bump C:\\Users\\L.J.Mier\\Desktop\\Downloads\\tree\\tree1_3ds\\bark_loo.jpg
+
+newmtl Rinde_Leaf.013
+Ns 96.078431
+Ka 1.000000 1.000000 1.000000
+Kd 0.379608 0.373333 0.379608
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd C:\Users\L.J.Mier\Downloads\tree\tree1_3ds\blatt1_a.jpg
+map_d C:\\Users\\L.J.Mier\\Downloads\\tree\\tree1_3ds\\blatt1_a.jpg
+
+newmtl Rinde_Leaf.014
+Ns 96.078431
+Ka 1.000000 1.000000 1.000000
+Kd 0.379608 0.373333 0.379608
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd C:\Users\L.J.Mier\Desktop\Downloads\tree\tree1_3ds\blatt1_a.jpg
+map_d C:\\Users\\L.J.Mier\\Desktop\\Downloads\\tree\\tree1_3ds\\blatt1_a.jpg
+
+newmtl Rinde_Leaf.015
+Ns 96.078431
+Ka 1.000000 1.000000 1.000000
+Kd 0.379608 0.373333 0.379608
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd C:\Users\L.J.Mier\Desktop\Downloads\tree\tree1_3ds\blatt1_a.jpg
+map_d C:\\Users\\L.J.Mier\\Desktop\\Downloads\\tree\\tree1_3ds\\blatt1_a.jpg
+
+newmtl Rinde_Leaf.016
+Ns 96.078431
+Ka 1.000000 1.000000 1.000000
+Kd 0.379608 0.373333 0.379608
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd C:\Users\L.J.Mier\Desktop\Downloads\tree\tree1_3ds\blatt1_a.jpg
+map_d C:\\Users\\L.J.Mier\\Desktop\\Downloads\\tree\\tree1_3ds\\blatt1_a.jpg
+
+newmtl Rinde_Level1.013
+Ns 96.078431
+Ka 1.000000 1.000000 1.000000
+Kd 0.197647 0.181961 0.181961
+Ks 0.001961 0.001961 0.001961
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd C:\Users\L.J.Mier\Downloads\tree\tree1_3ds\bark_loo.jpg
+map_Bump C:\\Users\\L.J.Mier\\Downloads\\tree\\tree1_3ds\\bark_loo.jpg
+
+newmtl Rinde_Level1.014
+Ns 96.078431
+Ka 1.000000 1.000000 1.000000
+Kd 0.197647 0.181961 0.181961
+Ks 0.001961 0.001961 0.001961
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd C:\Users\L.J.Mier\Desktop\Downloads\tree\tree1_3ds\bark_loo.jpg
+map_Bump C:\\Users\\L.J.Mier\\Desktop\\Downloads\\tree\\tree1_3ds\\bark_loo.jpg
+
+newmtl Rinde_Level1.015
+Ns 96.078431
+Ka 1.000000 1.000000 1.000000
+Kd 0.197647 0.181961 0.181961
+Ks 0.001961 0.001961 0.001961
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd C:\Users\L.J.Mier\Desktop\Downloads\tree\tree1_3ds\bark_loo.jpg
+map_Bump C:\\Users\\L.J.Mier\\Desktop\\Downloads\\tree\\tree1_3ds\\bark_loo.jpg
+
+newmtl Rinde_Level1.016
+Ns 96.078431
+Ka 1.000000 1.000000 1.000000
+Kd 0.197647 0.181961 0.181961
+Ks 0.001961 0.001961 0.001961
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd C:\Users\L.J.Mier\Desktop\Downloads\tree\tree1_3ds\bark_loo.jpg
+map_Bump C:\\Users\\L.J.Mier\\Desktop\\Downloads\\tree\\tree1_3ds\\bark_loo.jpg
+
+newmtl Rinde_Level2.013
+Ns 96.078431
+Ka 1.000000 1.000000 1.000000
+Kd 0.197647 0.181961 0.181961
+Ks 0.001961 0.001961 0.001961
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd C:\Users\L.J.Mier\Downloads\tree\tree1_3ds\bark_loo.jpg
+map_Bump C:\\Users\\L.J.Mier\\Downloads\\tree\\tree1_3ds\\bark_loo.jpg
+
+newmtl Rinde_Level2.014
+Ns 96.078431
+Ka 1.000000 1.000000 1.000000
+Kd 0.197647 0.181961 0.181961
+Ks 0.001961 0.001961 0.001961
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd C:\Users\L.J.Mier\Desktop\Downloads\tree\tree1_3ds\bark_loo.jpg
+map_Bump C:\\Users\\L.J.Mier\\Desktop\\Downloads\\tree\\tree1_3ds\\bark_loo.jpg
+
+newmtl Rinde_Level2.015
+Ns 96.078431
+Ka 1.000000 1.000000 1.000000
+Kd 0.197647 0.181961 0.181961
+Ks 0.001961 0.001961 0.001961
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd C:\Users\L.J.Mier\Desktop\Downloads\tree\tree1_3ds\bark_loo.jpg
+map_Bump C:\\Users\\L.J.Mier\\Desktop\\Downloads\\tree\\tree1_3ds\\bark_loo.jpg
+
+newmtl Rinde_Level2.016
+Ns 96.078431
+Ka 1.000000 1.000000 1.000000
+Kd 0.197647 0.181961 0.181961
+Ks 0.001961 0.001961 0.001961
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd C:\Users\L.J.Mier\Desktop\Downloads\tree\tree1_3ds\bark_loo.jpg
+map_Bump C:\\Users\\L.J.Mier\\Desktop\\Downloads\\tree\\tree1_3ds\\bark_loo.jpg
+
+newmtl Rinde_Level3.013
+Ns 96.078431
+Ka 1.000000 1.000000 1.000000
+Kd 0.197647 0.181961 0.181961
+Ks 0.001961 0.001961 0.001961
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd C:\Users\L.J.Mier\Downloads\tree\tree1_3ds\bark_loo.jpg
+map_Bump C:\\Users\\L.J.Mier\\Downloads\\tree\\tree1_3ds\\bark_loo.jpg
+
+newmtl Rinde_Level3.014
+Ns 96.078431
+Ka 1.000000 1.000000 1.000000
+Kd 0.197647 0.181961 0.181961
+Ks 0.001961 0.001961 0.001961
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd C:\Users\L.J.Mier\Desktop\Downloads\tree\tree1_3ds\bark_loo.jpg
+map_Bump C:\\Users\\L.J.Mier\\Desktop\\Downloads\\tree\\tree1_3ds\\bark_loo.jpg
+
+newmtl Rinde_Level3.015
+Ns 96.078431
+Ka 1.000000 1.000000 1.000000
+Kd 0.197647 0.181961 0.181961
+Ks 0.001961 0.001961 0.001961
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd C:\Users\L.J.Mier\Desktop\Downloads\tree\tree1_3ds\bark_loo.jpg
+map_Bump C:\\Users\\L.J.Mier\\Desktop\\Downloads\\tree\\tree1_3ds\\bark_loo.jpg
+
+newmtl Rinde_Level3.016
+Ns 96.078431
+Ka 1.000000 1.000000 1.000000
+Kd 0.197647 0.181961 0.181961
+Ks 0.001961 0.001961 0.001961
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd C:\Users\L.J.Mier\Desktop\Downloads\tree\tree1_3ds\bark_loo.jpg
+map_Bump C:\\Users\\L.J.Mier\\Desktop\\Downloads\\tree\\tree1_3ds\\bark_loo.jpg
+
+newmtl Water_Pool_Ligh
+Ns 96.078431
+Ka 1.000000 1.000000 1.000000
+Kd 0.400000 0.400000 0.400000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 0.600000
+illum 2
+map_Kd C:\Users\L.J.Mier\Downloads\xfgl1767gfls-ParkFountainCanopy-02\Water_Po.jpg
+
+newmtl _10567_StopLight_v1blinn1SG
+Ns 29.411765
+Ka 0.000000 0.000000 0.000000
+Kd 0.000000 0.000000 0.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd C:\Users\L.J.Mier\Desktop\Downloads\StopLight_v1_L3.123c50438851-98fc-498c-a6c8-a08a16e4bc7a\StopLight_v1_L3.123c50438851-98fc-498c-a6c8-a08a16e4bc7a\StopLight.jpg
+map_Ka C:\\Users\\L.J.Mier\\Desktop\\Downloads\\StopLight_v1_L3.123c50438851-98fc-498c-a6c8-a08a16e4bc7a\\StopLight_v1_L3.123c50438851-98fc-498c-a6c8-a08a16e4bc7a\\StopLight.jpg
+
+newmtl __Stone_Brushed
+Ns 96.078431
+Ka 1.000000 1.000000 1.000000
+Kd 0.400000 0.400000 0.400000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+
+newmtl material
+Ns 96.078431
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2

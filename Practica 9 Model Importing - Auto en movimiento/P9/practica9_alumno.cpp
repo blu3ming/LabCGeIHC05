@@ -31,6 +31,7 @@ Práctica 9: Animación y Carga de Modelos
 #include "Material.h"
 
 #include"Model.h"
+#include"Skybox.h"
 
 const float toRadians = 3.14159265f / 180.0f;
 
@@ -38,8 +39,15 @@ Window mainWindow;
 std::vector<Mesh*> meshList;
 std::vector<Shader> shaderList;
 Camera camera;
-float x;
-int cont, a = 0, fin = 0, inicio;
+
+float x,y,z, giro1=0.0;
+int a = 0, giro = 0, fin = 0, vuelta_1 = 0, vuelta_2 = 0, vuelta_3 = 0, vuelta_4 = 0;
+int giro_r1 = 0, encendido = 0;
+int subida = 0, arriba = 0, bajada = 0;
+int derecha = 0, abajo = 0, abajo1 = 0, izquierda = 0;
+int noventa = 90;
+float verde=1.0f, rojo=0.0f;
+
 Texture brickTexture;
 Texture dirtTexture;
 Texture plainTexture;
@@ -58,9 +66,12 @@ Model Llanta_M;
 Model Camino_M;
 Model Blackhawk_M;
 Model X_Wing;
+Model Roads;
 
 GLfloat deltaTime = 0.0f;
 GLfloat lastTime = 0.0f;
+
+Skybox skybox;
 
 // Vertex Shader
 static const char* vShader = "shaders/shader_light.vert";
@@ -119,10 +130,10 @@ void CreateObjects()
 	};
 
 	GLfloat floorVertices[] = {
-		-10.0f, 0.0f, -10.0f,	0.0f, 0.0f,		0.0f, -1.0f, 0.0f,
-		10.0f, 0.0f, -10.0f,	10.0f, 0.0f,	0.0f, -1.0f, 0.0f,
-		-10.0f, 0.0f, 10.0f,	0.0f, 10.0f,	0.0f, -1.0f, 0.0f,
-		10.0f, 0.0f, 10.0f,		10.0f, 10.0f,	0.0f, -1.0f, 0.0f
+		-15.0f, 0.0f, -15.0f,	0.0f, 0.0f,		0.0f, -1.0f, 0.0f,
+		15.0f, 0.0f, -15.0f,	15.0f, 0.0f,	0.0f, -1.0f, 0.0f,
+		-15.0f, 0.0f, 15.0f,	0.0f, 15.0f,	0.0f, -1.0f, 0.0f,
+		15.0f, 0.0f, 15.0f,		15.0f, 15.0f,	0.0f, -1.0f, 0.0f
 	};
 
 	calcAverageNormals(indices, 12, vertices, 32, 8, 5);
@@ -235,13 +246,15 @@ int main()
 	brickTexture.LoadTextureA();
 	dirtTexture = Texture("Textures/dirt.png");
 	dirtTexture.LoadTextureA();
-	plainTexture = Texture("Textures/plain.png");
+	plainTexture = Texture("Textures/Grass3.png");
 	plainTexture.LoadTextureA();
 	dadoTexture = Texture("Textures/dado.tga");
 	dadoTexture.LoadTextureA();
 	Material_brillante = Material(4.0f, 256);
 	Material_opaco = Material(0.3f, 4);
 	
+	Roads = Model();
+	Roads.LoadModel("Models/Roads.obj");
 	X_Wing = Model();
 	X_Wing.LoadModel("Models/x-wing.obj");
 	Kitt_M = Model();
@@ -259,11 +272,22 @@ int main()
 //contador de luces puntuales
 	unsigned int pointLightCount = 0;
 	//Declaración de primer luz puntual
-	pointLights[0] = PointLight(1.0f, 0.0f, 0.0f,
+	pointLights[0] = PointLight(verde, rojo, 0.0f,
 								0.0f, 1.0f,
-								2.0f, 1.5f,1.5f,
+								-2.0f, -0.5f,-1.4f,
 								0.3f, 0.2f, 0.1f);
 	pointLightCount++;
+
+	//Carga imagenes del skybox
+	std::vector<std::string> skyboxFaces;
+	skyboxFaces.push_back("Textures/Skybox/hills_lf.tga");
+	skyboxFaces.push_back("Textures/Skybox/hills_rt.tga");
+	skyboxFaces.push_back("Textures/Skybox/hills_up.tga");
+	skyboxFaces.push_back("Textures/Skybox/hills_dn.tga");
+	skyboxFaces.push_back("Textures/Skybox/hills_bk.tga");
+	skyboxFaces.push_back("Textures/Skybox/hills_ft.tga");
+
+	skybox = Skybox(skyboxFaces);
 
 	GLuint uniformProjection = 0, uniformModel = 0, uniformView = 0, uniformEyePosition = 0,
 		uniformSpecularIntensity = 0, uniformShininess = 0;
@@ -275,6 +299,11 @@ int main()
 	//Loop mientras no se cierra la ventana
 	while (!mainWindow.getShouldClose())
 	{
+		pointLights[0] = PointLight(rojo, verde, 0.0f,
+			0.0f, 1.0f,
+			-2.0f, -0.5f, -1.4f,
+			0.3f, 0.2f, 0.1f);
+
 		GLfloat now = glfwGetTime();
 		deltaTime = now - lastTime; 
 		lastTime = now;
@@ -288,6 +317,9 @@ int main()
 		// Clear the window
 		glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
 		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+
+		//muestra el skybox
+		skybox.DrawSkybox(camera.calculateViewMatrix(), projection);
 
 		shaderList[0].UseShader();
 		uniformModel = shaderList[0].GetModelLocation();
@@ -305,7 +337,7 @@ int main()
 		glUniform3f(uniformEyePosition, camera.getCameraPosition().x, camera.getCameraPosition().y, camera.getCameraPosition().z);
 
 		glm::mat4 model(1.0);
-
+		/*
 		model = glm::translate(model, glm::vec3(0.0f, 0.0f, -2.5f));
 		//model = glm::scale(model, glm::vec3(0.4f, 0.4f, 1.0f));
 		glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
@@ -320,8 +352,8 @@ int main()
 		dirtTexture.UseTexture();
 		Material_opaco.UseMaterial(uniformSpecularIntensity, uniformShininess);
 		meshList[1]->RenderMesh();
-
-		model = glm::mat4(1.0);
+		*/
+		//model = glm::mat4(1.0);
 		model = glm::translate(model, glm::vec3(0.0f, -2.0f, 0.0f));
 		//model = glm::scale(model, glm::vec3(0.4f, 0.4f, 1.0f));
 		glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
@@ -336,67 +368,74 @@ int main()
 		//dadoTexture.UseTexture();
 		//Material_brillante.UseMaterial(uniformSpecularIntensity, uniformShininess);
 		//meshList[3]->RenderMesh();
-	
+		
+		//entorno 3d
+		model = glm::mat4(1.0);
+		model = glm::translate(model, glm::vec3(0.0f, -1.9f, 0.0f));
+		model = glm::scale(model, glm::vec3(0.7f, 0.7f, 0.7f));
+		model = glm::rotate(model, 90 * toRadians, glm::vec3(0.0f, 1.0f, 0.0f));
+		//model = glm::scale(model, glm::vec3(0.005f, 0.005f, 0.005f));
+		glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+		Material_brillante.UseMaterial(uniformSpecularIntensity, uniformShininess);
+		Roads.RenderModel();
+
 		//coche
 		model = glm::mat4(1.0);
-		model = glm::translate(model, glm::vec3(0.0f, -1.5f, 0.0f));
-		model = glm::translate(model, glm::vec3(x, 0.0f, 0.0f));
-		//model = glm::scale(model, glm::vec3(2.0f, 2.0f, 2.0f));
-		model = glm::scale(model, glm::vec3(0.005f, 0.005f, 0.005f));
+		glm::mat4 modeltemp(1.0);
+		model = glm::translate(model, glm::vec3(0.0f, -1.5f, -3.2f));
+		model = glm::translate(model, glm::vec3(x, y, z));
+		model = glm::rotate(model, -giro * toRadians, glm::vec3(0.0f, 1.0f, 0.0f));
+		model = glm::rotate(model, giro1 * toRadians, glm::vec3(0.0f, 0.0f, 1.0f));
 		model = glm::rotate(model, -90 * toRadians, glm::vec3(1.0f, 0.0f, 0.0f));
-		model = glm::rotate(model, 90 * toRadians, glm::vec3(0.0f, 0.0f, 1.0f));
+		model = glm::rotate(model, -90 * toRadians, glm::vec3(0.0f, 0.0f, 1.0f));
+		modeltemp = model = glm::rotate(model, 180 * toRadians, glm::vec3(0.0f, 0.0f, 1.0f));
+		model = glm::scale(model, glm::vec3(0.005f, 0.005f, 0.005f));
 		glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
 		Material_brillante.UseMaterial(uniformSpecularIntensity, uniformShininess);
 		Kitt_M.RenderModel();
 
-		model = glm::mat4(1.0);
-		model = glm::translate(model, glm::vec3(0.0f, 2.8f, 0.0f));
-		//model = glm::scale(model, glm::vec3(2.0f, 2.0f, 2.0f));
-		model = glm::scale(model, glm::vec3(0.005f, 0.005f, 0.005f));
-		model = glm::rotate(model, -90 * toRadians, glm::vec3(1.0f, 0.0f, 0.0f));
-		model = glm::rotate(model, 90 * toRadians, glm::vec3(0.0f, 0.0f, 1.0f));
-		glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
-		Material_brillante.UseMaterial(uniformSpecularIntensity, uniformShininess);
-		X_Wing.RenderModel();
-
-		model = glm::mat4(1.0);
-		model = glm::translate(model, glm::vec3(1.15f, -1.6f, 0.5f));
-		model = glm::translate(model, glm::vec3(x, 0.0f, 0.0f));
-		model = glm::scale(model, glm::vec3(0.004f, 0.004f, 0.004f));
-		model = glm::rotate(model, 180 * toRadians, glm::vec3(0.0f, 1.0f, 0.0f));
+		//model = glm::mat4(1.0);
+		model = glm::translate(modeltemp, glm::vec3(-0.58f, -1.2f, -0.08f));
+		//model = glm::translate(model, glm::vec3(x, 0.0f, 0.0f));
+		model = glm::rotate(model, 90 * toRadians, glm::vec3(0.0f, 1.0f, 0.0f));
+		model = glm::rotate(model, giro_r1 * toRadians, glm::vec3(1.0f, 0.0f, 0.0f));;
 		model = glm::rotate(model, a * toRadians, glm::vec3(0.0f, 0.0f, 1.0f));
-		glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
-		Material_brillante.UseMaterial(uniformSpecularIntensity, uniformShininess);
-		Llanta_M.RenderModel();
-
-		model = glm::mat4(1.0);
-		model = glm::translate(model, glm::vec3(1.15f, -1.6f, -0.5f));
-		model = glm::translate(model, glm::vec3(x, 0.0f, 0.0f));
 		model = glm::scale(model, glm::vec3(0.004f, 0.004f, 0.004f));
-		model = glm::rotate(model, -a * toRadians, glm::vec3(0.0f, 0.0f, 1.0f));
 		glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
 		Material_brillante.UseMaterial(uniformSpecularIntensity, uniformShininess);
 		Llanta_M.RenderModel();
-
-		model = glm::mat4(1.0);
-		model = glm::translate(model, glm::vec3(-1.35f, -1.6f, -0.5f));
-		model = glm::translate(model, glm::vec3(x, 0.0f, 0.0f));
-		model = glm::scale(model, glm::vec3(0.003f, 0.003f, 0.003f));
+		
+		//model = glm::mat4(1.0);
+		model = glm::translate(modeltemp, glm::vec3(0.58f, -1.2f, -0.08f));
+		//model = glm::translate(model, glm::vec3(x, 0.0f, 0.0f));
+		model = glm::rotate(model, -90 * toRadians, glm::vec3(0.0f, 1.0f, 0.0f));
+		model = glm::rotate(model, -giro_r1 * toRadians, glm::vec3(1.0f, 0.0f, 0.0f));
 		model = glm::rotate(model, -a * toRadians, glm::vec3(0.0f, 0.0f, 1.0f));
+		model = glm::scale(model, glm::vec3(0.004f, 0.004f, 0.004f));
 		glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
 		Material_brillante.UseMaterial(uniformSpecularIntensity, uniformShininess);
 		Llanta_M.RenderModel();
-
-		model = glm::mat4(1.0);
-		model = glm::translate(model, glm::vec3(-1.35f, -1.6f, 0.5f));
-		model = glm::translate(model, glm::vec3(x, 0.0f, 0.0f));
+		
+		//model = glm::mat4(1.0);
+		model = glm::translate(modeltemp, glm::vec3(0.55f, 1.4f, -0.15f));
+		//model = glm::translate(model, glm::vec3(x, 0.0f, 0.0f));
+		model = glm::rotate(model, -90 * toRadians, glm::vec3(0.0f, 1.0f, 0.0f));
+		model = glm::rotate(model, -a * toRadians, glm::vec3(0.0f, 0.0f, 1.0f));
 		model = glm::scale(model, glm::vec3(0.003f, 0.003f, 0.003f));
-		model = glm::rotate(model, 180 * toRadians, glm::vec3(0.0f, 1.0f, 0.0f));
+		glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+		Material_brillante.UseMaterial(uniformSpecularIntensity, uniformShininess);
+		Llanta_M.RenderModel();
+		
+		//model = glm::mat4(1.0);
+		model = glm::translate(modeltemp, glm::vec3(-0.55f, 1.4f, -0.15f));
+		//model = glm::translate(model, glm::vec3(x, 0.0f, 0.0f));
+		model = glm::rotate(model, 90 * toRadians, glm::vec3(0.0f, 1.0f, 0.0f));
 		model = glm::rotate(model, a * toRadians, glm::vec3(0.0f, 0.0f, 1.0f));
+		model = glm::scale(model, glm::vec3(0.003f, 0.003f, 0.003f));
 		glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
 		Material_brillante.UseMaterial(uniformSpecularIntensity, uniformShininess);
 		Llanta_M.RenderModel();
-
+		/*
 		model = glm::mat4(1.0);
 		model = glm::translate(model, glm::vec3(2.0f, 2.0f, 0.0f));
 		model = glm::scale(model, glm::vec3(0.1f, 0.1f, 0.1f));
@@ -411,24 +450,162 @@ int main()
 		glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
 		Material_brillante.UseMaterial(uniformSpecularIntensity, uniformShininess);
 		Camino_M.RenderModel();
-
+		*/
 			glUseProgram(0);
 
 		mainWindow.swapBuffers();
+		//avanza arriba y fin
 		if (fin == 0) {
+			vuelta_1 = 0; derecha = 0; vuelta_2 = 0; abajo = 0; subida = 0; arriba = 0; bajada = 0;
+			abajo1 = 0; vuelta_3 = 0; izquierda = 0; vuelta_4 = 0;
 			x += 0.02;
 			a += 5;
-			if (x > 8.0) {
-				fin = 1;
-			}
+			giro_r1 -= 5;
+			if (giro_r1 < 0) { giro_r1 = 0; }
+			if (x > 5.0) { fin == 1; vuelta_1 = 1; }
 		}
 		
-		if (fin == 1) {
+		//primera vuelta
+		if (vuelta_1 == 1) {
+			fin = 1; derecha = 0; vuelta_2 = 0; abajo = 0; subida = 0; arriba = 0; bajada = 0;
+			abajo1 = 0; vuelta_3 = 0; izquierda = 0; vuelta_4 = 0;
+			a += 5;
+			giro += 1;
+			z += 0.02;
+			x += 0.02;
+			giro_r1 += 2;
+			if (giro_r1 > 45) { giro_r1 =45; }
+			if (giro == noventa) { derecha = 1; vuelta_1 = 0; noventa += 90; }
+		}
+
+		//avanza derecha y fin
+		if (derecha == 1) {
+			fin = 1; vuelta_1 = 0; vuelta_2 = 0; abajo = 0; subida = 0; arriba = 0; bajada = 0;
+			abajo1 = 0; vuelta_3 = 0; izquierda = 0; vuelta_4 = 0;
+			a += 5;
+			z += 0.02;
+			giro_r1 -= 5;
+			if (giro_r1 < 0) { giro_r1 = 0; }
+			if (z > 5.0) { vuelta_2 = 1; derecha = 0;}
+		}
+
+		//segunda vuelta
+		if (vuelta_2 == 1) {
+			fin = 1; vuelta_1 = 0; derecha = 0; abajo = 0; subida = 0; arriba = 0; bajada = 0;
+			abajo1 = 0; vuelta_3 = 0; izquierda = 0; vuelta_4 = 0;
+			a += 5;
+			giro += 1;
 			x -= 0.02;
-			a -= 5;
-			if (x < -8.0) {
-				fin = 0;
-			}
+			z += 0.02;
+			giro_r1 += 2;
+			if (giro_r1 > 45) { giro_r1 = 45; }
+			if (giro== noventa) { abajo = 1; vuelta_2 = 0; noventa += 90;}
+		}
+
+		//avanza antes de subida
+		if (abajo == 1) {
+			fin = 1; vuelta_1 = 0; derecha = 0; vuelta_2 = 0; subida = 0; arriba = 0; bajada = 0;
+			abajo1 = 0; vuelta_3 = 0; izquierda = 0; vuelta_4 = 0;
+			a += 5;
+			x -= 0.02;
+			giro_r1 -= 5;
+			if (giro_r1 < 0) { giro_r1 = 0; }
+			if (x<4.8) { subida = 1; abajo = 0; }
+		}
+		
+		//subida
+		if (subida == 1) {
+			fin = 1; vuelta_1 = 0; derecha = 0; vuelta_2 = 0; abajo = 0; arriba = 0; bajada = 0;
+			abajo1 = 0; vuelta_3 = 0; izquierda = 0; vuelta_4 = 0;
+			a += 5;
+			giro1 += 0.13;
+			x -= 0.03;
+			if (x < 3.5) { y += 0.007; }
+			else { y += 0; }
+			rojo = 1.0f;
+			verde = 0.8f;
+			if (giro1 > 16.0)giro1 = 16.0;
+			if (x < 0.5) { arriba = 1; subida = 0; }
+		}
+
+		//arriba
+		if (arriba == 1) {
+			fin = 1; vuelta_1 = 0; derecha = 0; vuelta_2 = 0; abajo = 0; subida = 0; bajada = 0;
+			abajo1 = 0; vuelta_3 = 0; izquierda = 0; vuelta_4 = 0;
+			a += 5;
+			giro1 -= 0.3;
+			x -= 0.03;
+			y += 0.005;
+			if (y > 0.8) y = 0.8;
+			verde = 0.0f;
+			rojo = 1.0f;
+			if (giro1 < 0.0) giro1 = 0.0;
+			if (x < -3.0) { bajada = 1; arriba = 0; }
+		}
+
+		//bajada
+		if (bajada == 1) {
+			fin = 1; vuelta_1 = 0; derecha = 0; vuelta_2 = 0; abajo = 0; subida = 0; arriba = 0;
+			abajo1 = 0; vuelta_3 = 0; izquierda = 0; vuelta_4 = 0;
+			a += 5;
+			giro1 -= 0.22;
+			x -= 0.03;
+			y -= 0.006;
+			if (giro1 < -16.0)giro1 = -16.0;
+			if (y < 0.0) y = 0.0;
+			if (x < -6.6) { abajo1 = 1; bajada = 0; }
+		}
+
+		//abajo1
+		if (abajo1 == 1) {
+			fin = 1; vuelta_1 = 0; derecha = 0; vuelta_2 = 0; abajo = 0; subida = 0; arriba = 0; bajada = 0;
+			vuelta_3 = 0; izquierda = 0; vuelta_4 = 0;
+			a += 5;
+			giro1 += 0.33;
+			x -= 0.03;
+			y -= 0.006;
+			if (giro1 > 0.0) giro1 = 0.0;
+			if (y < 0.0) y = 0.0;
+			if (x < -8.5) { vuelta_3 = 1; abajo1 = 0; }
+		}
+
+		//tercera vuelta
+		if (vuelta_3 == 1) {
+			fin = 1; vuelta_1 = 0; derecha = 0; vuelta_2 = 0; abajo = 0; subida = 0; arriba = 0; bajada = 0;
+			abajo1 = 0; izquierda = 0; vuelta_4 = 0;
+			a += 5;
+			giro += 1;
+			x -= 0.02;
+			z -= 0.02;
+			giro_r1 += 2;
+			if (giro_r1 > 45) { giro_r1 = 45; }
+			if (giro == noventa) { izquierda = 1; vuelta_3 = 0; noventa += 90;}
+		}
+
+		//izquierda
+		if (izquierda == 1) {
+			fin = 1; vuelta_1 = 0; derecha = 0; vuelta_2 = 0; abajo = 0; subida = 0; arriba = 0; bajada = 0;
+			abajo1 = 0; vuelta_3 = 0; vuelta_4 = 0;
+			a += 5;
+			z -= 0.02;
+			verde = 1.0f;
+			rojo = 0.0f;
+			giro_r1 -= 5;
+			if (giro_r1 < 0) { giro_r1 = 0; }
+			if (z<1.8) { vuelta_4 = 1; izquierda = 0; }
+		}
+		
+		//cuarta vuelta
+		if (vuelta_4 == 1) {
+			fin = 1; vuelta_1 = 0; derecha = 0; vuelta_2 = 0; abajo = 0; subida = 0; arriba = 0; bajada = 0;
+			abajo1 = 0; vuelta_3 = 0; izquierda = 0;
+			a += 5;
+			giro += 1;
+			x += 0.02;
+			z -= 0.02;
+			giro_r1 += 2;
+			if (giro_r1 > 45) { giro_r1 = 45; }
+			if (giro == noventa) { fin = 0; vuelta_4 = 0; noventa += 90;}
 		}
 	}
 
